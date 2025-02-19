@@ -41,9 +41,9 @@ template PODContainsKV () {
 
     signal input podID; // content ID of POD
     signal input R8x, R8y, S; // EdDSA signature
-    signal input Ax, Ay; // EdDSA public keyHash
-    signal input keyHash, valueHash;
-    signal input depth, index, siblings[maxDepth];
+    signal input Ax, Ay; // EdDSA public key
+    signal input keyHash, valueHash; // key and value hashes
+    signal input depth, index, siblings[maxDepth]; // Merkle proof
     
     // Checks valid POD signature
     EdDSAPoseidonVerifier()(
